@@ -8,7 +8,7 @@ project(ryan_network C CXX)
 
 # 添加搜索路径
 include_directories(
-    ${PROJECT_SOURCE_DIR}
+    ${PROJECT_SOURCE_DIR}/src
     )
 
 
@@ -17,7 +17,7 @@ include_directories(
 #aux_source_directory(${PROJECT_SOURCE_DIR}/ryan_network/logger SRC_LOGGER)
 #aux_source_directory(${PROJECT_SOURCE_DIR}/ryan_network/logger SRC_LOGGER)
 #如果想要不包含子目录下的文件，则使用file
-file(GLOB SRC_MEMORY_POOL ${PROJECT_SOURCE_DIR}/*.cc)
+file(GLOB SRC_MEMORY_POOL ${PROJECT_SOURCE_DIR}/src/memory_pool.cc)
 file(GLOB MAIN_MEMORY_POOL_TEST ${PROJECT_SOURCE_DIR}/test/memory_pool_test.cc)
 
 # 设置编译选项(没用上)
